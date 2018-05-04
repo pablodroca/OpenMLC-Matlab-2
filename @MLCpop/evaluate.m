@@ -53,7 +53,9 @@ function [mlcpop,mlctable]=evaluate(mlcpop,mlctable,mlc_parameters,eval_idx);
                 %retrieve object in the table
                 m=mlctable.individuals((idv_to_evaluate(i)));
                 
-                JJ(i)=feval(f,m,mlc_parameters,i);
+                JJ(i), s, b=feval(f,m,mlc_parameters,i);
+                %m=mlctable.update_values(idv_to_evaluate(i),s, b);
+
                 date_ev(i)=now;
                 if verb>2;loopprog(nidx);end
             end
@@ -74,7 +76,10 @@ function [mlcpop,mlctable]=evaluate(mlcpop,mlctable,mlc_parameters,eval_idx);
                 if verb>2;fprintf('%s\n',mlctable.individuals(idv_to_evaluate(i)).value);end
                 %retrieve object in the table
                 m=mlctable.individuals((idv_to_evaluate(i)));
+                s=[];
+                b=[];
                 JJ(i)=feval(f,m,mlc_parameters,i);
+                    %m=mlctable.update_values(idv_to_evaluate(i),s, b);
                 date_ev(i)=now;
             end
             

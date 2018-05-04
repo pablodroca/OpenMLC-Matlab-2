@@ -49,7 +49,7 @@ end
         return
     end
         
-    
+    mlc.parameters.generation_log_fileID = fopen('indiv_generation.log', 'w');
     curgen=length(mlc.population);
     if curgen==0 %% population is empty, we have to create it
         mlc.generate_population;
@@ -83,6 +83,7 @@ end
         end
 
     end
+    fclose(mlc.parameters.generation_log_fileID);
 end
 
 

@@ -85,6 +85,7 @@ properties
     fgen
     show_best
     problem_variables
+    generation_log_fileID
 end
 
 properties 

@@ -60,6 +60,8 @@ classdef MLCind < handle
  
     
     properties
+        s
+        b
         type
         value
         cost
@@ -85,6 +87,8 @@ classdef MLCind < handle
         function obj=MLCind(varargin)
             obj.type='';
             obj.value=[];
+            obj.s=[];
+            obj.b=[];
             obj.cost=-1;
             obj.cost_history=[];
             obj.appearences=1;

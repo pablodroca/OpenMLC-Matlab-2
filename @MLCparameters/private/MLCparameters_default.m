@@ -59,7 +59,9 @@ parameters.size=1000;
         %parameters.badvalues_elim='all';
         parameters.preevaluation=0;
         parameters.preev_function='';
-        parameters.problem_variables.gamma=0.1;
+        parameters.problem_variables.gamma_a=0.1;
+        parameters.problem_variables.gamma_b=0.1;
+        parameters.problem_variables.gamma_c=0.1;
         %% MLC behaviour parameters 
         parameters.save=1;
         parameters.saveincomplete=1;

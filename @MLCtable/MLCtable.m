@@ -11,6 +11,7 @@ classdef MLCtable < handle
         [obj,number,already_exist]=add_individual(obj,mlcind)
         idx=find_individual(obj,mlcind)
         obj=update_individual(obj,idx,J);
+        %obj=update_values(obj,idx,s,b);
   
         function obj=MLCtable(Nind)
             if nargin<1
